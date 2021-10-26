@@ -10,16 +10,11 @@ public class Main {
         Scanner input = new Scanner(System.in);
 
 
-        Render sa = new Render();
-        System.out.println("sadjahdasda");
-        System.out.println("sadjahdasda");
-        System.out.println("sadjahdasda");
-        sa.renderFunctionThree();
-        sa.renderFunctionTwo(sa.menuList,"CHOOSE YOUR ACTION:");
 
-        System.out.println("input");
 
-        String choice = input.nextLine();
+
+
+
 
 
 
