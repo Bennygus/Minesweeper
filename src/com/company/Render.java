@@ -3,26 +3,30 @@ package com.company;
 import java.util.Scanner;
 
 public class Render {
-
+    String[] menuList = {};
 
     String separator = "=========================";
 
-    Render(){}
 
 
 
-    public void renderFunction(String[] menu,String message){
+
+    public String renderFunction(String[] menu,String message){
              Scanner input = new Scanner(System.in);
-             for (String k:menu){
-                 System.out.println(k);
-             }
+        // display part for menu make a for each loop , fill&use the menuList
+
+        System.out.println("display");
+        System.out.println("display");
+        System.out.println("display");
+
              System.out.println(separator);
             System.out.println(message);
             System.out.println(separator);
 
 
              System.out.print("> ");
-             input.nextLine();
+
+        return input.nextLine().trim();
 
          }
 
