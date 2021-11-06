@@ -2,27 +2,38 @@ package com.company;
 
 public class Objekt {
 
-    private String[] X = {"A", "B", "C", "D", "E", "F", "G", "H", "j", "I"};
+    private String X;
+    private String Name;
     private boolean boomb;
     private boolean flagg;
 
 
-    public Objekt(String [] X,boolean boomb, boolean flagg){
+    public Objekt(String X,String Name,boolean boomb, boolean flagg){
         this.X=X;
         this.boomb=boomb;
         this.flagg=flagg;
+        this.Name=Name;
 
         for (  int i = 0;i <= 9; i++) {
-            System.out.println(X[i]+"0 "+X[i]+"1 "+X[i]+"2 "+X[i]+"3 "+X[i]+"4 "+X[i]+"5 "+X[i]+"6 "+X[i]+"7 "+X[i]+"8 "+X[i]+"9");
+
         }
     }
-    public String[] getX() {
+    public String getX() {
         return X;
     }
 
 
-    public void setName(String[]X) {
+    public void setX(String X) {
         this.X = X;
+    }
+
+    public String getName() {
+        return Name;
+    }
+
+
+    public void setName(String Name) {
+        this.Name = Name;
     }
     public boolean getboomb() {
         return boomb;
@@ -41,6 +52,8 @@ public class Objekt {
         this.flagg = flagg;
     }
 }
+
+
 
 
 
