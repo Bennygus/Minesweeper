@@ -20,7 +20,7 @@ public class Main {
         Render sa = new Render();
         String message = "CHOOSE YOUR ACTION";
 
-        return sa.renderFunction(sa.menuList,message);
+        return sa.renderFunction(sa.getMenuList(),message);
     }
 
 
