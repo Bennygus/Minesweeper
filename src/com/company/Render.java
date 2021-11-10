@@ -10,20 +10,8 @@ public class Render {
     private String[] positionIndexOne = {"0","1","2","3","4","5","6","7","8","9"};
     private String[] positionIndexTwo = {"A","B","C","D","E","F","G","H","I","J"};
 
-    public String[] getPositionIndexOne() {
-        return this.positionIndexOne;
-    }
 
 
-    public String[] getPositionIndexTwo() {
-        return this.positionIndexTwo;
-    }
-
-
-
-    public String[] getMenuList() {
-        return menuList;
-    }
 
 
 
@@ -47,6 +35,18 @@ public class Render {
         return input.nextLine().trim().toUpperCase();
 
          }
+
+    public String[] getPositionIndexOne() {
+        return this.positionIndexOne;
+    }
+
+    public String[] getPositionIndexTwo() {
+        return this.positionIndexTwo;
+    }
+
+    public String[] getMenuList() {
+        return menuList;
+    }
 
 
 

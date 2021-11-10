@@ -17,10 +17,10 @@ public class Main {
     }
 
     private static String renderMenu() {
-        Render sa = new Render();
+        Render renderMenu = new Render();
         String message = "CHOOSE YOUR ACTION";
 
-        return sa.renderFunction(sa.getMenuList(),message);
+        return renderMenu.renderFunction(renderMenu.getMenuList(),message);
     }
 
 
