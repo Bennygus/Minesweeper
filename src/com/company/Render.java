@@ -1,14 +1,16 @@
 package com.company;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Render {
 
     private final String letterSeparator = "+--------------------";
-    String separator = "=========================";
+   private final String separator = "=======================";
     private final String[] menuList = {"New","Load","High score"};
-    private String[] positionIndexOne = {"0","1","2","3","4","5","6","7","8","9"};
-    private String[] positionIndexTwo = {"A","B","C","D","E","F","G","H","I","J"};
+     final String[] positionIndexOne = {"0","1","2","3","4","5","6","7","8","9"};
+     final String[] positionIndexTwo = {"A","B","C","D","E","F","G","H","I","J"};
+     private int counter =0;
 
 
 
@@ -18,7 +20,6 @@ public class Render {
 
     public String renderFunction(String[] menuList,String message){
              Scanner input = new Scanner(System.in);
-        // display part for menu make a for each loop , fill&use the menuList
 
         System.out.println("Welcome to minesweeper");
         for (String k:menuList){
@@ -35,6 +36,72 @@ public class Render {
         return input.nextLine().trim().toUpperCase();
 
          }
+    public String renderFunctionTwo(String message, ArrayList<Objekt>objectList){
+        Scanner input = new Scanner(System.in);
+        String[] letters = {"  ","A", "B", "C", "D", "E", "F", "G", "H", "I", "J"};
+        int [] number = {0,0,1,2,3,4,5,6,7,8,9};
+        for (int row = 0; row <= 10; row++) {
+
+            for (int column = 0; column <= 10; column++) {
+
+                if (row == 1 && column ==0){
+                    System.out.println(" "+ letterSeparator);
+                }
+
+                if (row == 0) {
+
+                    System.out.print(letters[column]);
+
+                }
+
+
+                else if (column == 0) {
+                    System.out.print(number[row]+"|");
+                }
+
+                //  Scanner input = new Scanner(System.in);
+                //  System.out.print("");
+                //  int row = input.nextInt();
+                //  int column = 10;
+                //  boolean boardGame = row > column;
+
+                //  if (boardGame){
+                //      System.out.print(column);
+                //  }
+
+                else{
+
+                    System.out.print(objectList.get(counter).getState());
+
+                    counter++;
+
+                }
+
+
+
+                System.out.print(" ");
+            }
+
+            System.out.println();
+
+
+        }
+
+        counter = 0;
+
+
+        System.out.print("");
+
+        System.out.println(separator);
+        System.out.println(message);
+        System.out.println(separator);
+
+
+        System.out.print(">");
+
+
+        return input.nextLine().trim();
+    }
 
     public String[] getPositionIndexOne() {
         return this.positionIndexOne;
