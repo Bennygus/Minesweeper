@@ -1,26 +1,30 @@
 package com.company;
 
+import java.util.ArrayList;
+import java.util.Random;
+
 public class Objekt {
 
-    private String X;
+    private String state = "X";
     private String Name;
-    private boolean boomb;
-    private boolean flagg;
+    private boolean bomb = false;
+    private boolean flagg = false;
     private int newBomb;
     private int[] contain = new int[10];
 
 
-    public Objekt(String X,String Name,boolean boomb, boolean flagg){
-        this.X=X;
-        this.boomb=boomb;
-        this.flagg=flagg;
+    Objekt(){}
+
+    public Objekt(String Name){
+
         this.Name=Name;
 
 
     }
 
-    /*
-    public void randomBomb(ArrayList<BoardTest> boardTestList){
+
+    public void randomBomb(ArrayList<Objekt> objectList){
+
         Random rand = new Random();
 
 
@@ -43,26 +47,19 @@ public class Objekt {
 
         for (int i=0;i<contain.length;i++) {
 
-            // containTwo.add(contain[i]) ;
-            // System.out.println(containTwo.get(i) + "ss");
 
+            objectList.get(contain[i]).setBomb(true);
 
-
-
-
-            boardTestList.get(contain[i]).setBomb(true);
-            System.out.println(contain[i]); //list index of bombs
+            //System.out.println(contain[i]); //list index of bombs
         }
     }
-    */
 
-    public String getX() {
-        return X;
+    public String getState() {
+        return state;
     }
 
-
-    public void setX(String X) {
-        this.X = X;
+    public void setState(String state) {
+        this.state = state;
     }
 
     public String getName() {
@@ -70,25 +67,29 @@ public class Objekt {
     }
 
 
-    public void setName(String Name) {
-        this.Name = Name;
-    }
-    public boolean getboomb() {
-        return boomb;
+    public boolean isBomb() {
+        return bomb;
     }
 
-
-    public void setBoomb(boolean boomb) {
-        this.boomb = boomb;
+    public void setBomb(boolean bomb) {
+        this.bomb = bomb;
     }
-    public boolean getflag() {
+
+    public boolean isFlagg() {
         return flagg;
     }
-
 
     public void setFlagg(boolean flagg) {
         this.flagg = flagg;
     }
+
+    public int[] getContain() {
+        return contain;
+    }
+
+
+
+
 }
 
 
