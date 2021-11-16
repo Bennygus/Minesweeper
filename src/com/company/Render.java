@@ -6,11 +6,15 @@ import java.util.Scanner;
 public class Render {
 
     private final String letterSeparator = "+--------------------";
-   private final String separator = "=======================";
-    private final String[] menuList = {"New","Load","High score"};
-     final String[] positionIndexOne = {"0","1","2","3","4","5","6","7","8","9"};
-     final String[] positionIndexTwo = {"A","B","C","D","E","F","G","H","I","J"};
-     private int counter =0;
+    private final String separator = "=======================";
+   // private final String[] menuList = {"New","Load","High score"};
+    //hamdi
+   private String[] menulist = {"New", "Load","Highscore" };
+
+
+    final String[] positionIndexOne = {"0","1","2","3","4","5","6","7","8","9"};
+    final String[] positionIndexTwo = {"A","B","C","D","E","F","G","H","I","J"};
+    private int counter =0;
 
 
 
@@ -21,10 +25,12 @@ public class Render {
     public String renderFunction(String[] menuList,String message){
              Scanner input = new Scanner(System.in);
 
-        System.out.println("Welcome to minesweeper");
-        for (String k:menuList){
-            System.out.println(k);
-        }
+             //hamdi
+        System.out.println("Welcome to Minesweeper");
+        for (String M: menulist)
+            System.out.println(M);// write your code here
+
+
 
              System.out.println(separator);
             System.out.println(message);
@@ -111,14 +117,11 @@ public class Render {
         return this.positionIndexTwo;
     }
 
-    public String[] getMenuList() {
-        return menuList;
+    public String[] getMenulist() {
+        return menulist;
     }
 
-
-
-
-
-
-
+    public void setMenulist(String[] menulist) {
+        this.menulist = menulist;
+    }
 }
