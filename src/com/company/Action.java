@@ -4,11 +4,9 @@ import java.util.*;
 
 public class Action {
 
-    private static Object Main;
-    private static Object Objekt;
 
 
-    static void myMethod(String actioninput, ArrayList<Main> Main) {
+    static void myMethod(String actioninput, Objekt objekt) {
         Scanner input = new Scanner(System.in);
 
 
@@ -28,12 +26,15 @@ public class Action {
                     System.out.println(splitstring[i]);
                     if(letters.equals(splitstring[0])){
 
-                        if (splitstring[i].contains("Flagged")){
-                            System.out.println("CAN'T SWEEP because it is flagged");
-                        }
-                        if(splitstring[1].contains("Not Flagged")){
+                        if (splitstring[i].contains("Not Flagged")){
+                            objekt.setFlagg(!objekt.isFlagg());
                             System.out.println("CAN SWEEP because it is not flagged");
                         }
+                        if(splitstring[i].contains("Flagged")){
+                            objekt.setFlagg(objekt.isFlagg());
+                            System.out.println("CAN'T SWEEP because it is flagged");
+                        }
+                        String Newmessage = "YOU LOST!!!!!";
             }
 
 
