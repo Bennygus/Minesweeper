@@ -6,6 +6,8 @@ import java.util.ArrayList;
 
 public class Main {
 
+
+
     public static void main(String[] args) {
 
         boolean isTrue = false;
@@ -47,6 +49,8 @@ public class Main {
 
 
                 //Make a method call from action class and store it to message
+                Action myMeth= new Action();
+                message=myMeth.myMethod(actionInput,objectList);
 
 
 
