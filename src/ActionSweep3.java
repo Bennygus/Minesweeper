@@ -1,28 +1,40 @@
 package com.company.src;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ActionSweep3 {
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        System.out.println("X");
-        String[] letter = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J"};
-        int[] numbers = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+     boolean isTrue = false;
+     String message = "Game Over";
 
-        for (int i= 0; i < 1; i++) {
-            for (int randomBomb = 0; randomBomb < 1; randomBomb++) {
-                System.out.print("*");
-                System.out.println("");
-                System.out.println("GAME OVER");
+     public void gameOver(ArrayList<Objekt> objects){
+         Render pullFromRender = new Render();
 
-
-            }
+         for(Objekt object:objects){
+             if(object.isBomb() ) {
+               object.setState("*");
+             }
 
 
-            }
+         }
+         Render render = new Render();
+      String message = " Game Over";
 
 
-        }
+
+
+
+
+
+
+
+
+
+
+
 
 
     }
+}
+
+
