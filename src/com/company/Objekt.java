@@ -50,8 +50,7 @@ public class Objekt {
 
             objectList.get(contain[i]).setBomb(true);
 
-            //System.out.println(contain[i]); //list index of bombs
-        }
+                  }
     }
 
     public String getState() {

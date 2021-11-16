@@ -4,8 +4,9 @@ package com.company;
 
 import java.util.ArrayList;
 
-
 public class Main {
+
+
 
     public static void main(String[] args) {
 
@@ -22,19 +23,19 @@ public class Main {
             String actionInput =renderMenu();
 
             if (actionInput.equalsIgnoreCase("new")){
-                 for (int i = 0; i < 10; i++) {
+                for (int i = 0; i < 10; i++) {
                     for (int j = 0; j < 10; j++) {
                         // Give every object a name ex: A + 0 (both strings) = A0 ,next will be B0 , j = letters and i numbers
-                         Objekt createObject = new Objekt((pullFromRender.positionIndexTwo[j] + pullFromRender.positionIndexOne[i]));
-                         //Object created added to list
-                         objectList.add(createObject);
+                        Objekt createObject = new Objekt((pullFromRender.positionIndexTwo[j] + pullFromRender.positionIndexOne[i]));
+                        //Object created added to list
+                        objectList.add(createObject);
 
                     }
                 }
 
-                 Objekt createBomb = new Objekt();
+                Objekt createBomb = new Objekt();
                 // Make random objects set to contain a bomb by calling randomBomb method
-                 createBomb.randomBomb(objectList);
+                createBomb.randomBomb(objectList);
 
 
                 isTrue = true;
@@ -48,10 +49,8 @@ public class Main {
 
 
                 //Make a method call from action class and store it to message
-
-
-
-
+                Action myMeth= new Action();
+                message=myMeth.myMethod(actionInput,objectList);
 
 
 
@@ -62,14 +61,6 @@ public class Main {
 
 
     }
-
-
-
-
-
-
-
-
 
 
 
