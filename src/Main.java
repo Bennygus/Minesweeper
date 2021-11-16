@@ -1,5 +1,4 @@
-package com.company;
-
+package com.company.src;
 
 
 import java.util.ArrayList;
