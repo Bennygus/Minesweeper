@@ -1,3 +1,5 @@
+package com.company.src;
+
 import java.util.Scanner;
 
 public class Main {
